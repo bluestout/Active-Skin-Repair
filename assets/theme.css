@@ -6807,7 +6807,7 @@ button.mfp-close {
   text-align: center;
   text-transform: uppercase;
   font-size: calc(0.6875rem * var(---font-adjust-body));
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   letter-spacing: 1px;
   line-height: 1.2;
   transition: opacity 0.15s ease;
@@ -6822,6 +6822,7 @@ button.mfp-close {
 .product__tag--rectangle span {
   display: inline-block;
   white-space: nowrap;
+  vertical-align: -webkit-baseline-middle;
 }
 .product__tag--circle {
   min-width: 38%;
