@@ -6807,7 +6807,7 @@ button.mfp-close {
   text-align: center;
   text-transform: uppercase;
   font-size: calc(0.6875rem * var(---font-adjust-body));
-  margin: 5px 0;
+  margin-bottom: 10px;
   letter-spacing: 1px;
   line-height: 1.2;
   transition: opacity 0.15s ease;
