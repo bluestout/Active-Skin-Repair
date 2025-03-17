@@ -185,7 +185,15 @@
             {%- comment -%} Loop product media skipping the featured {%- endcomment -%}
             {%- for media in product.media -%}
               {%- if media.id != featured_media_id -%}
-                {%- render 'media', unique: unique, current_variant: current_variant, media: media, featured_media: featured_media, enable_video_looping: enable_video_looping, image_gallery: image_gallery, product_tags: product.tags -%}
+                {%- liquid 
+                  
+                  is_selected = false
+
+                  if media.id contains '26935970627780' or media.id contains '24794888536260'
+                    assign is_selected = true
+                  endif  
+                -%}
+                {%- render 'media', unique: unique, current_variant: current_variant, media: media, featured_media: featured_media, enable_video_looping: enable_video_looping, image_gallery: image_gallery, product_tags: product.tags, is_selected: is_selected -%}
               {%- endif -%}
             {%- endfor -%}
           {%- else -%}
