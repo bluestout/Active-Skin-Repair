@@ -180,20 +180,12 @@
         <div class="product-single__media-slider{% if product.media.size == 1 %} product-single__media-slider--single{% endif %}" data-product-single-media-slider>
           {%- if product.media.size > 0 -%}
             {%- comment -%} Show Featured media first {%- endcomment -%}
-            {%- render 'media', unique: unique, current_variant: current_variant, media: featured_media, featured_media: featured_media, enable_video_looping: enable_video_looping, image_gallery: image_gallery, product_tags: product.tags -%}
+            {%- render 'media', unique: unique, current_variant: current_variant, media: product.media[1], featured_media: product.media[1], enable_video_looping: enable_video_looping, image_gallery: image_gallery, product_tags: product.tags -%}
   
             {%- comment -%} Loop product media skipping the featured {%- endcomment -%}
             {%- for media in product.media -%}
-              {%- if media.id != featured_media_id -%}
-                {%- liquid 
-                  
-                  is_selected = false
-
-                  if media.id contains '26935970627780' or media.id contains '24794888536260'
-                    assign is_selected = true
-                  endif  
-                -%}
-                {%- render 'media', unique: unique, current_variant: current_variant, media: media, featured_media: featured_media, enable_video_looping: enable_video_looping, image_gallery: image_gallery, product_tags: product.tags, is_selected: is_selected -%}
+              {%- if media.id != product.media[1].id -%}
+                {%- render 'media', unique: unique, current_variant: current_variant, media: media, featured_media: featured_media, enable_video_looping: enable_video_looping, image_gallery: image_gallery, product_tags: product.tags -%}
               {%- endif -%}
             {%- endfor -%}
           {%- else -%}
@@ -245,11 +237,11 @@
           {%- if product.media.size > 1 and hide_product_thumbnails == false -%}
             <div class="product-single__thumbnails" id="ProductThumbs" data-product-single-media-thumbs>
               {%- comment -%} Show Featured media thumbnail first {%- endcomment -%}
-              {%- render 'media-thumb', media: featured_media, featured_media: featured_media, product_title: product.title -%}
+              {%- render 'media-thumb', media: product.media[1], featured_media: product.media[1], product_title: product.title -%}
   
               {%- comment -%} Loop product media skipping the featured media thumbnail {%- endcomment -%}
               {%- for media in product.media -%}
-                {%- if media.id != featured_media_id -%}
+                {%- if media.id != product.media[1].id -%}
                   {%- render 'media-thumb', media: media, featured_media: featured_media, product_title: product.title -%}
                 {%- endif -%}
               {%- endfor -%}

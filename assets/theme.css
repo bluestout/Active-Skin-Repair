@@ -6807,14 +6807,13 @@ button.mfp-close {
   text-align: center;
   text-transform: uppercase;
   font-size: calc(0.6875rem * var(---font-adjust-body));
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 5px;
+  margin: 5px 0;
   letter-spacing: 1px;
   line-height: 1.2;
   transition: opacity 0.15s ease;
   transition: left 0.2s ease;
+  display: inline;
+  border-radius: 5px;
 }
 .product__tag--rectangle {
   padding: 8px;
