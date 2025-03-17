@@ -6814,9 +6814,10 @@ button.mfp-close {
   transition: left 0.2s ease;
   display: inline-block;
   border-radius: 5px;
+  font-weight: 600;
 }
 .product__tag--rectangle {
-  padding: 5px;
+  padding: 5px 8px;
   height: auto;
 }
 .product__tag--rectangle span {
