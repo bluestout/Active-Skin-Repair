@@ -6812,7 +6812,7 @@ button.mfp-close {
   line-height: 1.2;
   transition: opacity 0.15s ease;
   transition: left 0.2s ease;
-  display: inline;
+  display: inline-block;
   border-radius: 5px;
 }
 .product__tag--rectangle {
