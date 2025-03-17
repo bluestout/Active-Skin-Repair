@@ -1,0 +1,99 @@
+<!-- Rebuy Speed Load Script -->
+<script async src="https://cdn.rebuyengine.com/onsite/js/rebuy.js?shop={{ shop.permanent_domain }}"></script>
+<script>
+  console.log("%c Rebuy test", "font-weight: bold; font-size: 50px;color: red; text-shadow: 3px 3px 0 rgb(217,31,38) , 6px 6px 0 rgb(226,91,14) , 9px 9px 0 rgb(245,221,8) , 12px 12px 0 rgb(5,148,68) , 15px 15px 0 rgb(2,135,206) , 18px 18px 0 rgb(4,77,145) , 21px 21px 0 rgb(42,21,113)")
+</script>
+
+  <!-- Rebuy Speed Load Script -->
+<script async src="https://cdn.rebuyengine.com/onsite/js/rebuy.js?shop={{ shop.permanent_domain }}"></script>
+  <style>
+
+  #MainContent .cbb-frequently-bought-container{
+    display: none !important;
+  }
+  .powered-by-rebuy {
+    display: none;
+}
+  .rebuy-cart__progress-bar-meter-fill{
+    background: #ed6f43 !important;
+} 
+  .rebuy-cart__flyout {
+    margin: 0px;
+    border-radius: 0px;
+}
+  .rebuy-cart__flyout-recommendations {
+    padding-top: 0px;
+}
+  .rebuy-cart div:empty,
+  .rebuy-cart span:empty {
+    display: none;
+}
+
+  .rebuy-cart__background,
+  .rebuy-cart .rebuy-star-rating > * {
+    display: block !important;
+}
+  .rebuy-checkbox {
+	appearance: none !important;
+	-webkit-appearance: none !important;
+	padding: 0 0 0 15px !important;
+    text-align: center
+}
+  .rebuy-checkbox-label input{
+      position: relative !important;
+}
+
+  .rebuy-checkbox:checked:before {
+	appearance: none;
+	-webkit-appearance: none;
+	display: inherit;
+    background: #ed6f43 !important;
+    width: 160%;
+    border-radius: 20%;
+    height: 160%;
+    outline: 2px solid grey;
+}
+  .rebuy-checkbox-label{
+    width: 20px !important;
+    margin-top: 10px !important;
+}
+  .rebuy-button{
+    background: #ed6f43 !important;
+    color: white !important;
+    border: 1px solid white !important;
+    }
+  .rebuy-cart__flyout-empty-cart a {
+    background: #ed6f43 !important;
+    border-color: #ed6f43 !important;
+}
+  </style>
+  
+<!-- /* Manual Widget Installs BELOW*/ -->
+  
+{% if product %}
+  <!-- Add-ons Widget --> <div data-rebuy-id="88267" data-rebuy-shopify-product-ids="{{ product.id }}"></div>
+  <!-- Upsell Pop-up Widget --> <div data-rebuy-id="88861" data-rebuy-shopify-product-ids="{{ product.id }}"></div>
+{% endif %}
+
+<!-- Accelerated Checkout Buttons CODE BELOW -->
+<!-- <style>
+	.additional-checkout-buttons {
+		display: none;
+		width: 100%;
+	}
+</style>
+ -->
+<!-- {% if additional_checkout_buttons %}
+	<div class="additional-checkout-buttons additional-checkout-buttons--vertical">
+		{{ content_for_additional_checkout_buttons }}
+	</div>
+{% endif %} -->
+
+<!-- <script>
+	document.addEventListener("rebuy:smartcart.ready", () => {
+		Rebuy.libraries.$(".additional-checkout-buttons")
+			.appendTo(".rebuy-cart__flyout-actions")
+			.show();
+	});
+</script> -->
+

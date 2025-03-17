@@ -1,0 +1,20 @@
+{%assign subtitle = '' %}
+{% if _product.tags contains 'double' %}
+	{%assign subtitle = 'A value pack with both the spray & gel systems' %}
+{% elsif _product.tags contains 'combo' %}
+	{%assign subtitle = 'Our best value.  Bundle the spray & gel with an additional bottle of hydrogel spray' %}
+{% elsif _product.tags contains 'gel' %}
+	{%assign subtitle = 'A cooling hydrogel for multi-functional healing support' %}
+{% elsif _product.tags contains 'spray' %}
+	{%assign subtitle = 'Medical-grade skin repair in a fine mist spray' %}
+{% elsif _product.tags contains 'kids' %}
+	{%assign subtitle = 'A daily solution for kids skincare' %}
+{% elsif _product.tags contains 'baby' %}
+	{%assign subtitle = 'Pediatric recommended baby skincare' %}
+{% elsif _product.tags contains 'antimicrobial' %}
+	{%assign subtitle = 'A clean, smooth, and safe natural antimicrobial solution' %}
+{%endif%}
+
+{% if _product.metafields.custom.product_short_description != blank %}
+{{ _product.metafields.custom.product_short_description }}
+{% endif %}
