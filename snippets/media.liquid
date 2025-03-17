@@ -42,7 +42,7 @@
 -%}
 
 <div id="{{ media_wrapper_id }}"
-  class="product-single__media-slide asfaweraws {% unless featured_media == media %} media--hidden{% endunless %} {% if is_selected %} is-selected asfaweraws {% endif %}"
+  class="product-single__media-slide{% unless featured_media == media %} media--hidden{% endunless %} {% if is_selected %} is-selected {% endif %}"
   data-id="{{ media.id }}"
   data-media-id="{{ unique }}-{{ media.id }}"
   data-aspectratio="{{ media_aspect_ratio }}"
